@@ -18,6 +18,7 @@ void main()
 	char ch='y';
 	int ch1;
 	s1.top=-1;
+	clrscr();
 	while(ch=='y'|| ch=='Y')
 	{
 		printf("\n Enter Choice: \n 1:Push \t 2:PoP \n");
@@ -64,12 +65,12 @@ void disp()
 {
 	int i;
 	i=s1.top;
+	printf("<--");
 	while(i>=0)
 	{
 		printf("\n%d",s1.a[i]+1);
 		i--;
 	}
-	printf("<--");
 }
 
 
