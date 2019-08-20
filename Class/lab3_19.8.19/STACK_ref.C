@@ -2,22 +2,17 @@
 #include<conio.h>
 #define MAX 20
 
-struct stack
-{
-	int a[MAX];
-	int top;
-}s1;
-
-void pop();
-void push();
-void disp();
+void pop(int *);
+void push(int *,int *);
+void disp(int *,int *);
 
 
 void main()
 {
 	char ch='y';
 	int ch1;
-	s1.top=-1;
+	int top=-1;
+	int a[MAX];
 	clrscr();
 	while(ch=='y'|| ch=='Y')
 	{
@@ -25,11 +20,11 @@ void main()
 		scanf("\n %d",&ch1);
 		switch(ch1)
 		{
-			case 1: push();
-				disp();
+			case 1: push(a,&top);
+				disp(a,&top);
 				break;
-			case 2: pop();
-				disp();
+			case 2: pop(&top);
+				disp(a,&top);
 				break;
 			default: printf("\n Wrong input!!!");
 		}
@@ -39,45 +34,36 @@ void main()
 	getch();
 }
 
-void push()
+void push(int a[],int *top)
 {
-	if(s1.top==MAX-1)
+	if(*top==MAX-1)
 	{
 		printf("\n Overflow!!");
 	}
 	else
 	{
-		s1.a[++(s1.top)]=s1.top;
+		a[++(*top)]=*top;
 	}
 }
-void pop()
+void pop(int *top)
 {
-	if(s1.top==-1)
+	if(*top==-1)
 	{
 		printf("\n Underflow!!");
 	}
 	else
 	{
-		s1.top--;
+		(*top)--;
 	}
 }
-void disp()
+void disp(int a[],int *top)
 {
 	int i;
-	i=s1.top;
+	i=*top;
 	printf("<--");
 	while(i>=0)
 	{
-		printf("\n%d",s1.a[i]+1);
+		printf("\n%d",a[i]+1);
 		i--;
 	}
 }
-
-
-
-
-
-
-
-
-
