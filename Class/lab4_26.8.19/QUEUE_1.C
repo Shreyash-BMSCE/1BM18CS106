@@ -45,7 +45,6 @@ void enqueue(int a[],int *r)
 				scanf("%d",&val);
 				++(*r);
 				a[*r]=val;
-				printf("%d",a[*r]);
 		}
 }
 void dequeue(int a[],int *r,int *f)
