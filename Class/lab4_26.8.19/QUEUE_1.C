@@ -40,7 +40,7 @@ void enqueue(int a[],int *r)
 				int val;
 				printf("\n Enter the value:");
 				scanf("%d",&val);
-				*r++;
+				++(*r);
 				a[*r]=val;
 				printf("%d",a[*r]);
 		}
@@ -67,7 +67,7 @@ void disp(int a[],int *r,int *f)
 		else
 		{
 				int i;
-				for(i=0;i<=*r;i++)
+				for(i=*f;i<=*r;i++)
 				{
 						printf("%d",a[i]);
 				}
