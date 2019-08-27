@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<conio.h>
-#define MAX 30
+#define MAX 5
 void enqueue(int *,int *);
 void dequeue(int *,int *, int *);
 void disp(int *, int *,int *);
