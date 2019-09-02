@@ -1,6 +1,7 @@
 #include<stdio.h>
 #define MAX 10
-#include<conio.h>
+//#include<conio.h>
+
 
 void push(int *,int *,int );
 int pop(int *,int *);
@@ -11,13 +12,14 @@ void main()
     int a[MAX],val;
     int top=-1;
     int ch1;
-    char ch;
-    char exp[20] ="531*+9-";
-    clrscr();
+    char ch,exp[20];
+	printf("\n Enter the expression to be evaluated: ");
+	gets(exp);
+  //  clrscr();
     eval(a,&top,exp);
     val=a[top];
-    printf("\n \t top= %d \t val= %d \n %s\n exp[0]=%c \n ",top,val,exp,exp[0]);
-    getch();
+    printf("\n Expression = %s \n Final Value = %d \n \n ",exp,val);
+  //  getch();
 }
 void push(int *a,int *top,int val )
 {
@@ -28,7 +30,6 @@ void push(int *a,int *top,int val )
     else
     {
 	a[++(*top)]=val;
-	printf("%d \n",a[*top]);
     }
 }
 int pop(int *a,int *top)
