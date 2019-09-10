@@ -25,12 +25,12 @@ void main()
 
 		    for(i=0;i<n1;i++)
 		    {
-			printf("\n Enter the number of letters you want to input for the string :");
-			scanf("%d",)
+			printf("\n Enter the number of letters you want to input:");
+			scanf("%d",&k);
 			fflush(stdin);
+			printf("\n Enter the string:");
 			scanf("%s",&s1[i].a);
-			k=count(s1[i].a);
-			s1[i].a[k+1]='\0';
+			s1[i].a[k]='\0';
 		    }
 		    //s1[0].a[1]='\0';
 		    printf("\n Enter the number of inputs for list 2:");
@@ -40,8 +40,8 @@ void main()
 			printf("\n Enter a character for the string :");
 			fflush(stdin);
 			scanf("%s",&s2[i].a);
-			k=strlen(s2[i].a);
-			s2[i].a[k+1]='\0';
+			//k=strlen(s2[i].a);
+			//s2[i].a[k+1]='\0';
 		    }
 
 
