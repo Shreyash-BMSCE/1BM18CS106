@@ -2,8 +2,8 @@
 #include<stdlib.h>
 #include<conio.h>
 #define MAX 5
-void enqueue(int *,int *);
-void dequeue(int *,int *, int *);
+void aprocess(int *,int *);
+void dprocess(int *,int *, int *);
 void disp(int *, int *,int *);
 
 void main()
@@ -19,9 +19,9 @@ void main()
 		scanf("%d",&ch1);
 		switch(ch1)
 		{
-			case 1: enqueue(queue,&r);
+			case 1: aprocess(queue,&r);
 				break;
-			case 2: dequeue(queue,&r,&f);
+			case 2: dprocess(queue,&r,&f);
 				break;
 			case 3: disp(queue,&r,&f);
 				break;
@@ -32,7 +32,7 @@ void main()
 	}while(ch=='y'||ch=='Y');
 	getch();
 }
-void enqueue(int a[],int *r)
+void aprocess(int a[],int *r)
 {
 		if(*r==MAX-1)
 		{
@@ -47,7 +47,7 @@ void enqueue(int a[],int *r)
 				a[*r]=val;
 		}
 }
-void dequeue(int a[],int *r,int *f)
+void dprocess(int a[],int *r,int *f)
 {
 		if(*f>*r)
 		{
@@ -72,7 +72,7 @@ void disp(int a[],int *r,int *f)
 				printf("-->");
 				for(i=*f;i<=*r;i++)
 				{
-						printf("\t %d",a[i]);
+						printf("\t Process %d",a[i]);
 				}
 		}
 }
