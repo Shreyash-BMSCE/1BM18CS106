@@ -15,7 +15,7 @@ void main()
 	clrscr();
 	do
 	{
-		printf("\n Enter choice: \n 1.Enqueue 2.DeQueue 3.Display \t");
+		printf("\n Enter choice: \n 1.New Process 2.Complete a Process 3.Display Remaining Processes \t");
 		scanf("%d",&ch1);
 		switch(ch1)
 		{
@@ -41,7 +41,7 @@ void aprocess(int a[],int *r)
 		else
 		{
 				int val;
-				printf("\n Enter the value:");
+				printf("\n Enter the process number:");
 				scanf("%d",&val);
 				++(*r);
 				a[*r]=val;
@@ -51,7 +51,7 @@ void dprocess(int a[],int *r,int *f)
 {
 		if(*f>*r)
 		{
-				printf("Reached End!! cannot Insert!!");
+				printf("Reached End!! cannot Insert more Processes!!");
 				exit(0);
 		}
 		else
@@ -64,7 +64,7 @@ void disp(int a[],int *r,int *f)
 {
 		if(*f>MAX-1)
 		{
-				printf("\n Queue Empty!!!");
+				printf("\n No Process!!!");
 		}
 		else
 		{
