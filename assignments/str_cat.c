@@ -1,10 +1,9 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
-#include<conio.h>
+//#include<conio.h>
 #define MAX 10
-//void input_s(char *);
-//void disp(char *);
+
 void main()
 {
 	struct strr
@@ -32,7 +31,6 @@ void main()
 			scanf("%s",&s1[i].a);
 			s1[i].a[k]='\0';
 		    }
-		    //s1[0].a[1]='\0';
 		    printf("\n Enter the number of inputs for list 2:");
 		    scanf("%d",&n2);
 		    for(i=0;i<n2;i++)
@@ -40,8 +38,6 @@ void main()
 			printf("\n Enter a character for the string :");
 			fflush(stdin);
 			scanf("%s",&s2[i].a);
-			//k=strlen(s2[i].a);
-			//s2[i].a[k+1]='\0';
 		    }
 
 
@@ -64,31 +60,4 @@ void main()
 	}while(ch=='y'||ch=='Y');
 	//getch();
 }
-/*
-void input_s(char *a)
-{
-    int n,i;
-    char val[MAX];
-    printf("\n Enter a character for the string :");
-    gets(val);
-	a=val;        
-}
-		
-void disp(char *a)
-{
-	int i;
-	for(i=0;i<=MAX;i++)
-	{
-		printf(" %s",a[i]);
-	}
-}
 
-void strr(char *s1,char *s2,int n1,int n2)
-{
-    int i;
-    for(i=0;i<MAX;i++)
-    {
-        
-    }
-}
-*/
