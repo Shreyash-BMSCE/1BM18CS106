@@ -4,21 +4,21 @@
 typedef struct node
 {
 	int data;
-	struct node *next;
+	struct node *link;
 }node;
 
-void find_mid(node *);
+void find_mid(node *,int);
 
 void main()
 {
-	int p1,i,ch1;
+	int p1,c=0,i,ch1;
     int ch = 1;
 	node *p,*q,*first;
 	p = (node*)malloc(sizeof(node));
 	p->data = p1;
-	p->next = NULL;
+	p->link = NULL;
 	first = p;
-	while(ch==1)
+	while(1)
 	{
 		printf("\nEnter your choice");
 		printf("\n 1. Insert Data");
@@ -30,34 +30,37 @@ void main()
                     scanf("%d", &p1);
                     q = (node*)malloc(sizeof(node));
                     q->data = p1;
-                    q->next = NULL;
-                    p->next = q;
-                    p = p->next;
+                    q->link = NULL;
+                    p->link = q;
+                    p = p->link;
+                    c++;
                     break;		
-			case 2 :find_mid(first);
+			case 2 :find_mid(first,c);
 			 	    break;
 		}
-        printf("\n Press 1 to Continue:");
-        scanf("%d",&ch);
+       // printf("\n Press 1 to Continue:");
+      //  scanf("%d",&ch);
 	}
 }
 
-void find_mid(node *first)
+void find_mid(node *first,int c)
 {
 	node *temp = first;
 	if(first != NULL)
 	{
-		if(first->next == NULL)
+		if(first->link == NULL)
 			{
 				printf("\n--- Middle node is found to be --- \n --->>> %d", first->data);
 			}
 		else
 		{
-			while(first!=NULL && first->next!=NULL)
-			{
-				temp = temp->next;
-				first = first->next->next;
-			}
+            printf("\n%d",c);
+            c=c/2 + 1;
+            while(c!=0)
+            {
+                temp = temp -> link;
+                c--;
+            }
 			printf("\n --- Middle node is found to be --- --->>> %d\n", temp->data);
 		}
 	}
