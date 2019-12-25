@@ -1,7 +1,16 @@
+/* WAP for the below given scenario:
+A university wants to automate their admission process. Students are admitted based on the marks scored in a qualifying exam.
+A student is identified by student id, age and marks in qualifying exam. Data are valid, if:
+● Age is greater than 20
+● Marks is between 0 and 100 (both inclusive)
+A student qualifies for admission, if
+● Age and marks are valid and
+● Marks is 65 or more
+Write a program to represent the students seeking admission in the university
+*/
 #include<stdio.h>
 #include<math.h>
 #include<conio.h>
-
 struct stud
 {
 	char name[20];
