@@ -1,3 +1,4 @@
+WAP in C to represent the stack operation to manage Peter’s shirts in to a cupboard. Use the push(), pop() functions taught in class. Give meaningful names to variables.
 #include<stdio.h>
 #include<conio.h>
 #define MAX 20
