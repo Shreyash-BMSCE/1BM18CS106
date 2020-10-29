@@ -1,3 +1,4 @@
+Write a program to evaluate a given postfix expression using Stacks.
 #include<stdio.h>
 #define MAX 10
 //#include<conio.h>
