@@ -1,3 +1,4 @@
+WAP for the below given scenario: A university wants to automate their admission process. Students are admitted based on the marks(>65 is pass) scored in a qualifying exam.
 #include<stdio.h>
 #include<conio.h>
 #include<stdlib.h>
