@@ -1,3 +1,5 @@
+
+WAP to simulate the FCFS job scheduling for the given set of processes. Please specify the type of queue used-linear/circular/double ended/priority
 #include<stdio.h>
 #include<stdlib.h>
 #include<conio.h>
